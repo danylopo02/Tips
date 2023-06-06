@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteinerIndex">
+        <header>
+            <div class="logo">PAPI</div>
+            <div class="h1">
+            <h1 class="title">TIPS</h1>
+            </div>
+            <div class="langWrap">
+                <a href="#" language='english' class="langIcon">
+                    <img src="ca.svg" alt="eng"  width="15px" height="15px" class="active">
+                </a>
+                <a href="#" language='deutchland' class="langIcon">
+                    <img src="de.svg" alt="de" width="15px" height="15px" data-reload>
+                </a>
+                <a href="#" language='français' class="langIcon">
+                    <img src="fr.svg" alt="fra" width="15px" height="15px" data-reload>
+                </a>
+                <a href="#" language='espagnol' class="langIcon">
+                    <img src="es.svg" alt="es"  width="15px" height="15px" data-reload>
+                </a>
+                <a href="#" language='ukrainian'>
+                    <img src="ua.svg" alt="ua"  width="15px" height="15px" data-reload>
+                </a>
+            </div>
+        </header>
+        <div>
+            <p class="description">Тips for waiter</p>
+            <h3 class="name">Waiter name here</h3>
+            <img src="FullSizeRende.jpg" alt="Waiter Photo" class="personPhoto">
+        </div>
+        <div class="buttonPosition">
+            <div class="buttons">
+                <button onclick="twentyFIve()" class="buttonStyle b5">5</button>
+            </div>
+            <div class="buttons">
+                <button class="buttonStyle b10" type="button" onclick="fifty()">10</button>
+            </div>
+            <div class="buttons">
+                <button class="buttonStyle b25" type="button" onclick="hundred()">25</button>
+            </div>
+        </div>
+        <div class="tipsInput">
+            <form id="form">
+            <input type="number" id="amount" value="0">
+            <span class="tipsCurrency">$CAD</span>
+        </div>
+        <footer>
+            <div class="payment">
+                <button class="paymentButton" type="submit"> Go To Payment &#8594</button>
+            </form>
+            </div>
+        </div>
+        <div class="svgIcons">
+            <a href="https://www.facebook.com" class="svgIcon">
+                <img src="facebook.svg" alt="eng"  width="15px" height="15px">
+            </a>
+            <a href="https://www.instagram.com" class="svgIcon">
+                <img src="instagram.svg" alt="eng"  width="15px" height="15px">
+            </a>
+            <a href="https://www.twitter.com" class="svgIcon">
+                <img src="twitter.svg" alt="eng"  width="15px" height="15px">
+            </a>
+            <a href="https://www.linkedin.com">
+                <img src="linkedin.svg" alt="eng"  width="15px" height="15px">
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function twentyFIve(){
+    document.getElementById("amount").value="5";
+}
+function fifty(){
+    document.getElementById("amount").value="10";
+}
+function hundred(){
+    document.getElementById("amount").value="25";
+}
+        const form = document.getElementById('form');
+const amount = document.getElementById('amount');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const formValue = form.value;
+    const amountValue = amount.value;
+    window.localStorage.setItem("form-value", formValue);
+    window.localStorage.setItem("amount-value", amountValue);
+    window.location.href = "paytest.html";
+});
+    </script>
+</body>
+</html>

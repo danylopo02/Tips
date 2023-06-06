@@ -1,0 +1,19 @@
+{
+  "name": "qr-site",
+  "version": "1.0.0",
+  "description": "Tips site",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danylopo02/qr-site.git"
+  },
+  "author": "Danylo Kulynych",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danylopo02/qr-site/issues"
+  },
+  "homepage": "https://github.com/danylopo02/qr-site#readme"
+}
